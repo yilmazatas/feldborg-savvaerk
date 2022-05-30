@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    <title>Document</title>
+</head>
+
+
+<header>
+
+
+  <img class="logo" src="img/feldborg-savvaerk-logo.png" alt=""></img>
+
+  
+
+<div class="navbar">
+<a href="index.html">Mængdeberegner</a>
+<div class="dropdown">
+<button class="dropbtn">DIY  
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-content">
+<a href="design.html">Design</a>
+<a href=""></a>
+
+</div>
+</div> 
+<a href="support.html">Support</a>
+
+
+
+
+</div>
+
+</header>
+<body>
+
+<h1>Mængdeberegner </h1>
+<h1>Hvor meget skal du bruge? </h1>
+
+<form>
+    <div class="row">
+
+        <div class="column">
+          
+          <button> <a href="javascript:void(null)"  onclick="showhide('row41');">Rektangel </button> 
+          <button> <a href="javascript:void(null)"  onclick="showhide('row42');">Cirkel</button>
+          <button> <a href="javascript:void(null)"  onclick="showhide('row43');">Trekant</a></button><br><br>
+          
+            <label for="produkt">Vælg Produkt: </label>
+            <select id="produkt" name="produkt">
+                <option value="" disabled selected>Vælg produkt</option>
+                <option value="Flis1">Flis1</option>
+                <option value="Flis2">Flis2</option>
+                <option value="Flis2">Flis3</option>
+      
+              </select>
+
+          <div id="row41">
+            <label class="HD">Højde/Dybde: Meter</label>
+            <input type="number"  placeholder="Indtast højde/dybde..." id="heightre"/>
+            
+
+            <label>Bredde: Meter</label>
+            <input type="number" placeholder="Indtast Bredde..." id="widthre"  /> 
+
+            <label>Længde: Meter</label>
+            <input type="number" placeholder="Indtast Længde..." id="lengthre"/> 
+          
+
+            <input type="button" id="calculatere" onClick="calculateVolume(lengthre.value, window.widthre.value, window.heightre.value)" value="Calculate Volume" />
+           </div>
+          
+          <div id="row42">
+            <label class="HD">Højde: Meter</label>
+             <input type="number"   placeholder="Indtast højde..."id="heightcyl">
+
+            <label class="Bredde">Radius: Meter</label>
+              <input type="number"  placeholder="Indtast Bredde..." id="radius">
+ 
+
+              <input type="button" id="calculatecyl" onClick="calculateVolume1(radius.value, window.heightcyl.value)" value="Calculate Volume" />
+          </div>
+
+          <div id="row43">
+            <label class="HD">Højde: Meter</label>
+             <input type="number"   placeholder="Indtast højde..." id="heighttra">
+
+             <label class="GF">Grundlinje: Meter</label>
+             <input type="number"   placeholder="Indtast grundlinje" id="grundlinje">
+             
+             <label class="Langde">Længde: Meter</label>
+            <input type="number" placeholder="Indtast Længde..." id="lengthtra"/> 
+ 
+
+            <input type="button" id="calculatetre" onClick="calculateVolume2(grundlinje.value,lengthtra.value, window.heighttra.value)" value="Calculate Volume" />
+
+          </div>
+
+          
+         </div> 
+
+       
+
+        <div class="column1">
+
+         
+          <label class="Langde">Resultat:</label>
+          <input type="number" id="volume" disabled="disabled" />  </p>
+          <div id="figur"></div>
+
+       
+        </div>
+  </div>
+
+</form>
+
+
+
+ <script src="javascript.js"></script>  
+
+ 
+</body>
+</html>
